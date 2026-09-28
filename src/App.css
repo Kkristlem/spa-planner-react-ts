@@ -1,0 +1,57 @@
+:root {
+  --ok: #1a7f37;
+  --warning: #9a6700;
+  --error: #cf222e;
+  font-family: system-ui, sans-serif;
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85em;
+}
+
+.badge-ok { background: #dafbe1; color: var(--ok); }
+.badge-warning { background: #fff8c5; color: var(--warning); }
+.badge-error { background: #ffebe9; color: var(--error); }
+
+.alerts-list { list-style: none; padding: 0; }
+.alert-error { color: var(--error); }
+.alert-warning { color: var(--warning); }
+
+.budgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.budget-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+@media (max-width: 600px) {
+  .app-shell { padding: 12px; }
+  table, thead, tbody, th, td, tr { display: block; }
+  th { display: none; }
+  td { padding: 4px 0; }
+}
